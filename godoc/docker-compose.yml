@@ -1,0 +1,9 @@
+godoc:
+  build: ./assets
+  volumes:
+    - ./src:/go/src
+  ports:
+    - "6060:6060"
+  environment:
+    GODOC_OPTS: "-analysis=pointer"
+    PRIVATE_KEY_PASS: <YOUR GITHUB PRIVATE KEY PASS>
