@@ -1,0 +1,6 @@
+sqs:
+  build: ./assets
+  ports:
+    - "4568:4568"
+  environment:
+    SQS_QUEUES: "my_queue1 my_queue2 my_queue3"
