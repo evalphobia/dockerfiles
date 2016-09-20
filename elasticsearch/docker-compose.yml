@@ -1,0 +1,4 @@
+elasticsearch:
+  build: ./assets
+  ports:
+     - "9200:9200"
