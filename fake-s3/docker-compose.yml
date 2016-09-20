@@ -1,0 +1,6 @@
+s3:
+  build: ./assets
+  volumes:
+    - ./assets/s3_data:/s3_data
+  ports:
+    - "4567:4567"
