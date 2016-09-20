@@ -1,0 +1,4 @@
+sns:
+  build: ./assets
+  ports:
+    - "9292:9292"
