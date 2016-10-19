@@ -1,0 +1,4 @@
+kinesis:
+  build: ./assets
+  ports:
+    - "4577:4577"
