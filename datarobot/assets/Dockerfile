@@ -9,8 +9,10 @@ RUN pip install bottle numpy cython pandas
 
 
 COPY ./server.py /opt/
-COPY ./prime.py /opt/
-RUN sed -e "s@re.findall(ur@re.findall(r@g" /opt/prime.py > /opt/prime3.py
+
+# /* add these lines in your Dockerfile */
+# COPY ./prime.py /opt/
+# RUN sed -e "s@re.findall(ur@re.findall(r@g" /opt/prime.py > /opt/prime3.py
 
 EXPOSE 8080 8080
 
