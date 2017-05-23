@@ -1,4 +1,16 @@
-elasticsearch:
-  build: ./assets
-  ports:
-     - "9200:9200"
+version: "2"
+services:
+  elasticsearch-2.4.0:
+    image: evalphobia/elasticsearch:2.4.0
+    build:
+      context: ./assets
+      dockerfile: Dockerfile-2.4.0
+    ports:
+       - "9201:9200"
+  elasticsearch-2.4.5:
+    image: evalphobia/elasticsearch:2.4.5
+    build:
+      context: ./assets
+      dockerfile: Dockerfile-2.4.5
+    ports:
+       - "9202:9200"
