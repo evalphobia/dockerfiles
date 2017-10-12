@@ -1,4 +1,16 @@
-datarobot:
-  build: ./assets
-  ports:
-    - "8080:8080"
+version: "2"
+services:
+  datarobot-3.5:
+    image: evalphobia/datarobot:3.5
+    build:
+      context: ./assets
+      dockerfile: Dockerfile-3.5
+    ports:
+      - "18080:8080"
+  datarobot-2.7:
+    image: evalphobia/datarobot:2.7
+    build:
+      context: ./assets
+      dockerfile: Dockerfile-2.7
+    ports:
+      - "28080:8080"

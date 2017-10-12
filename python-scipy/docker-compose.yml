@@ -1,2 +1,7 @@
-python-scipy:
-  build: ./assets
+version: '3'
+services:
+  python-scipy:
+    image: evalphobia/python-scipy:latest
+    build:
+      context: ./assets
+      dockerfile: Dockerfile

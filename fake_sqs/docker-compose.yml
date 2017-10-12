@@ -1,6 +1,7 @@
 sqs:
   build: ./assets
   ports:
-    - "4568:4568"
+    - "24568:4568"
   environment:
+    AWS_SQS_ENDPOINT: "http://localhost:4568"
     SQS_QUEUES: "my_queue1 my_queue2 my_queue3"

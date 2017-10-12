@@ -32,7 +32,9 @@ RUN mkdir -p /tmp/build \
 ENV BLAS=/tmp/build/libfblas.a
 ENV LAPACK=/tmp/build/liblapack.a
 
-RUN pip install numpy cython pandas matplotlib boto3 scipy seaborn statsmodels \
+RUN pip install cython numpy
+
+RUN pip install scipy pandas matplotlib boto3 seaborn statsmodels \
     && rm -rf /tmp/build
 
 ENTRYPOINT ["python", "/opt/project/main.py"]
