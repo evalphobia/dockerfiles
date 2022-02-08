@@ -1,0 +1,6 @@
+dynamodb:
+  build: ./assets
+  ports:
+    - "28000:8000"
+  volumes:
+    - .local/dynamodb:/var/lib/dynamodb
