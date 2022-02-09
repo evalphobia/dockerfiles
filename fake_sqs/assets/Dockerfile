@@ -11,7 +11,7 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
     && chmod +x go-sqs-create \
     && mv go-sqs-create /usr/local/bin/go-sqs-create
 
-RUN gem install fake_sqs -v 0.4.3 \
+RUN gem install fake_sqs -v 0.4.1 \
     && gem install thin \
     && rm -rf /usr/local/bundle/cache/*
 
