@@ -12,8 +12,9 @@ on:
         description: 'target repository'
         type: choice
         options:
-        - fake_sqs
         - dynamo-local-admin
+        - fake_sqs
+        - fake-s3
         - mailcatcher
 
 env:
