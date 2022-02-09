@@ -1,7 +1,7 @@
 fake_sqs
 ====
 
-docker-compose file for [async-aws/testing-sqs](https://github.com/async-aws/testing-sqs) (fork of [iain/fake_sqs](https://github.com/iain/fake_sqs) which is local fake AWS SQS server.
+docker-compose file for [iain/fake_sqs](https://github.com/iain/fake_sqs) which is local fake AWS SQS server.
 
 # Usage
 
