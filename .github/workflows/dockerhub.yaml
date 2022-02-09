@@ -14,6 +14,7 @@ on:
         options:
         - fake_sqs
         - dynamo-local-admin
+        - mailcatcher
 
 env:
   DOCKERHUB_USER: evalphobia

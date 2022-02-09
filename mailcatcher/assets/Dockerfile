@@ -1,8 +1,15 @@
-FROM ruby:2.3-alpine
+FROM ruby:2.7 as builder
 
-RUN apk add --update make gcc g++ sqlite-dev \
-    && rm -rf /var/cache/apk/* \
-    && gem install mailcatcher -v 0.6.4
+RUN gem install mailcatcher -v 0.8.1 \
+    && rm -rf /usr/local/bundle/cache/*
+
+FROM ruby:2.7-slim
+
+RUN apt-get update \
+  && apt-get install -y sqlite3 libsqlite3-dev \
+  && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /usr/local/bundle /usr/local/bundle/
 
 EXPOSE 1025 1080
 
